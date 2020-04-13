@@ -8,12 +8,16 @@ import {
 } from 'react-native';
 
 export default class Secured extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <View style={styles.container}>
                 <Text 
                     style={{fontSize: 27}}>
-                    ad9dbd96591f6d1ff
+                    {this.props.token}
                 </Text>
                 <View style={{margin:20}} />
                 <Button

@@ -39,11 +39,11 @@ export default class Login extends Component {
         .then((response) => response.json())
         .then((json) => {
             console.log(json);
-            this.props.onLoginPress();
+            this.props.onLoginPress(json.access_token);
         })
         .catch((error) => {
             console.error(error);
-            this.props.onLoginPress();
+            // this.props.onLoginPress('');
             Alert.alert('아이디/비밀번호를 다시 확인해주세요.');
         })
         .finally(() => {
